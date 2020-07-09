@@ -1,0 +1,6 @@
+<mat-form-field [appearance]="appearence || 'outline'">
+    <mat-label>{{name | translate}}</mat-label>
+    <mat-select [(ngModel)]="model">
+        <mat-option *ngFor="let cat of options" [value]="cat.value">{{cat?.label}}</mat-option>
+    </mat-select>
+</mat-form-field>

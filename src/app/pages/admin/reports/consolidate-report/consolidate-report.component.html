@@ -1,0 +1,31 @@
+<filter-form title="Consolidated Report" (getFilterValue)="getFilteredData($event)"></filter-form>
+<table>
+    <thead>
+        <tr>
+            <th>{{'SNO' | translate}}</th>
+            <th>{{'PROGRAM' | translate}}</th>
+            <th>{{'PROGRAM_SUBCATEGORY' | translate}}</th>
+            <!-- <th>{{'PAYMENT_TYPE' | translate}}</th> -->
+            <th>{{'TRANSACTION_DATE' | translate}}</th>
+            <th>{{'COUNTRY' | translate}}</th>
+            <th>{{'COUNT' | translate}}</th>
+            <th>{{'USD' | translate}}</th>
+            <th>{{'EUR' | translate}}</th>
+            <th>{{'GBP' | translate}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let doc of data; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{doc?.donationdetails?.program?.name}}</td>
+            <td>{{doc?.donationdetails?.programSubCategory?.name || '---'}}</td>
+            <!-- <td>{{!doc?.donationdetails?.isRecurring ? ('ONETIME' | translate):('RECURRING' | translate)}}</td> -->
+            <td>{{doc?.created | date: 'medium'}}</td>
+            <td>{{doc?.user?.country}}</td>
+            <td>{{doc?.donationdetails?.count || '---'}}</td>
+            <td>{{doc?.currencyTitle === 'USD' ? 'USD': '---'}}</td>
+            <td>{{doc?.currencyTitle === 'EUR' ? 'EUR': '---'}}</td>
+            <td>{{doc?.currencyTitle === 'GBP' ? 'GBP': '---'}}</td>
+        </tr>
+    </tbody>
+</table>

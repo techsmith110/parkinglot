@@ -1,0 +1,51 @@
+:host {
+    padding: 2rem;
+    .container {
+        height: calc(100vh - 150px);
+        overflow: auto;
+        .td-align {
+            word-break: break-all;
+            max-width: 20rem;
+            min-width: 15rem;
+        }
+        .table-header-text {
+            font-weight: 600;
+            font-size: 14px;
+            color: black;
+            min-width: 10rem;
+        
+        }
+        .td-width {
+            width: 300px;
+            min-width: 20rem;
+        }
+        .action-btn {
+            min-width: 120px;
+            text-align: center;
+
+            button {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin: 0 1rem;
+            }
+        }
+        .action-head {
+            text-align: center;
+        }
+        .td-padding {
+            padding: 1rem 1rem 1rem 0;
+        }
+        th {
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        @media all and (max-width: 800px) {
+            .setup-table {
+                overflow: auto;
+                
+            }
+        } 
+    }
+}

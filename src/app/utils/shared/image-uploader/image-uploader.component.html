@@ -1,0 +1,28 @@
+<div class="image-container">
+    <div class="upload-btn-wrapper">
+        <form>
+            <button class="btn">Upload Image</button>
+            <input type="file" accept="image/x-png,image/gif,image/jpeg" name="myfile"
+                (change)="fileChangeEvent($event)" />
+        </form>
+        <p>Here you can only upload images i-e(GIF, PNG, JPEG)</p>
+    </div>
+    <div class="image-uploading-container" *ngIf="imageCropped">
+        <img [src]="imageCropped" class="image-thumbnail">
+        <mat-progress-spinner class="example-margin" color="warn" mode="indeterminate" [value]="progress"
+            *ngIf="uploading">
+        </mat-progress-spinner>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <div class="success-checkmark">
+                <div class="check-icon">
+                    <span class="icon-line line-tip"></span>
+                    <span class="icon-line line-long"></span>
+                    <div class="icon-circle"></div>
+                    <div class="icon-fix"></div>
+                </div>
+            </div>
+            <p class="mat-subheading-2">Image Upload Successfully</p>
+        </div>
+    </div>
+
+</div>

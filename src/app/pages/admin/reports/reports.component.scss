@@ -1,0 +1,30 @@
+reports {
+    .page-layout {
+        overflow: auto;
+        max-height: calc(100vh - 64px);
+
+        table {
+            border-collapse: collapse;
+            position: relative;
+            width: 100%;
+            th {
+                background: white;
+                position: sticky;
+                top: 0;
+                box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+                padding: 1rem;
+                text-align: center;
+                border: solid 1px;
+            }
+
+            tr {
+                td {
+                    text-align: center;
+                    padding: 1rem;
+                    border: 1px solid black;
+
+                }
+            }
+        }
+    }
+}

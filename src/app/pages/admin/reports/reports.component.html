@@ -1,0 +1,25 @@
+<div id="forms" class="page-layout simple fullwidth" fxLayout="column">
+    <div [ngSwitch]="reportType">
+        <div *ngSwitchCase="'consolidated'">
+            <consolidate-report [data]="data"></consolidate-report>
+        </div>
+        <div *ngSwitchCase="'projection'">
+            <projection-report [data]="data"></projection-report>
+        </div>
+        <div *ngSwitchCase="'sponsorship'">
+            <sponsorship-report [data]="data"></sponsorship-report>
+        </div>
+        <div *ngSwitchCase="'donor'">
+            <donor-profile-report [data]="data"></donor-profile-report>
+        </div>
+        <div *ngSwitchCase="'islamic'">
+            <islamic-report [data]="data"></islamic-report>
+        </div>
+        <div *ngSwitchCase="'accounting'">
+            <accounting-report [data]="data"></accounting-report>
+        </div>
+        <div *ngSwitchDefault>
+
+        </div>
+    </div>
+</div>

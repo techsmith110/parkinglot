@@ -1,0 +1,19 @@
+<mat-card class="filter-container">
+    <mat-card-title>{{title | translate}}</mat-card-title>
+    <mat-card-content>
+        <div class="fields">
+            <date-to-and-from (changeDate)="getDateChange($event)" [to]="{text: 'Enter End Date'}"
+                [from]="{text:'Enter Start Date'}"></date-to-and-from>
+            <!-- <select-field name="Select Category" appearence="outline" model="" serviceName="programs" docName="category"></select-field>
+            <select-field name="Select Program Category" appearence="outline" model="" serviceName="programs" docName="programCategories"
+                parent="category">
+            </select-field>
+            <select-field name="Select Program Subcategory" appearence="outline" model=""
+                serviceName="programs" docName="programSubCategories" parent="programCategory"></select-field>
+            <select-field name="Select Country" appearence="outline" model="" serviceName="general" docName="countries"></select-field> -->
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="submit()">Apply Filter</button>
+    </mat-card-actions>
+</mat-card>

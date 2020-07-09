@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>{{from?.text}}</mat-label>
+        <input (dateChange)="dateChange(from,'from')" [(ngModel)]="from.date" matInput [matDatepicker]="dpFrom">
+        <mat-datepicker-toggle matSuffix [for]="dpFrom"></mat-datepicker-toggle>
+        <mat-datepicker color="accent" #dpFrom></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>{{to?.text}}</mat-label>
+        <input (dateChange)="dateChange(to,'to')" [(ngModel)]="to.date" matInput [matDatepicker]="dpTo">
+        <mat-datepicker-toggle matSuffix [for]="dpTo"></mat-datepicker-toggle>
+        <mat-datepicker color="accent" #dpTo></mat-datepicker>
+    </mat-form-field>
+</div>
